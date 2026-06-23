@@ -1,0 +1,13 @@
+package com.andrick.universalClipboard.application.ports.out;
+
+import com.andrick.universalClipboard.domain.models.ClipboardItem;
+
+import javax.sound.sampled.Clip;
+import java.util.Optional;
+
+public interface ClipboardRepositoryPort {
+    public void save(ClipboardItem data);
+    public Optional<ClipboardItem> save(String userId);
+
+    public Optional<ClipboardItem> get(String userId);
+}
