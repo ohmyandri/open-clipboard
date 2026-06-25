@@ -1,4 +1,4 @@
-package com.andrick.universalClipboard.application.ports.out;
+package com.andrick.universalClipboard.domain.ports.out;
 
 import com.andrick.universalClipboard.domain.models.ClipboardItem;
 

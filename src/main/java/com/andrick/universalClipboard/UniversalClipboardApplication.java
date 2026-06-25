@@ -1,11 +1,11 @@
 package com.andrick.universalClipboard;
 
-import com.andrick.universalClipboard.application.ports.out.ClipboardRepositoryPort;
-import com.andrick.universalClipboard.application.ports.out.NotificationPort;
+import com.andrick.universalClipboard.domain.ports.out.ClipboardRepositoryPort;
+import com.andrick.universalClipboard.domain.ports.out.NotificationPort;
 import com.andrick.universalClipboard.domain.models.ClipboardItem;
 import com.andrick.universalClipboard.domain.models.ContentType;
-import com.andrick.universalClipboard.domain.useCases.GetPayloadUseCase;
-import com.andrick.universalClipboard.domain.useCases.UploadPayloadUseCase;
+import com.andrick.universalClipboard.application.use_cases.GetPayloadUseCase;
+import com.andrick.universalClipboard.application.use_cases.UploadPayloadUseCase;
 import com.andrick.universalClipboard.infrastructure.adapters.out.persistence.InMemoryRepository;
 
 import java.time.LocalDateTime;

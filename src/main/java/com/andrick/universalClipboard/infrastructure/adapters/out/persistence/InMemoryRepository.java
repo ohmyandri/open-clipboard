@@ -1,6 +1,6 @@
 package com.andrick.universalClipboard.infrastructure.adapters.out.persistence;
 
-import com.andrick.universalClipboard.application.ports.out.ClipboardRepositoryPort;
+import com.andrick.universalClipboard.domain.ports.out.ClipboardRepositoryPort;
 import com.andrick.universalClipboard.domain.models.ClipboardItem;
 import org.springframework.stereotype.Repository;
 
