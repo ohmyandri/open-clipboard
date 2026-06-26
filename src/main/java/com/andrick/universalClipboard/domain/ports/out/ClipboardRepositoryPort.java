@@ -1,8 +1,7 @@
 package com.andrick.universalClipboard.domain.ports.out;
 
-import com.andrick.universalClipboard.domain.models.ClipboardItem;
+import com.andrick.universalClipboard.domain.models.clipboard.ClipboardItem;
 
-import javax.sound.sampled.Clip;
 import java.util.Optional;
 
 public interface ClipboardRepositoryPort {

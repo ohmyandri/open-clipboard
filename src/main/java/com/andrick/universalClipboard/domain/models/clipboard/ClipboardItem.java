@@ -1,4 +1,4 @@
-package com.andrick.universalClipboard.domain.models;
+package com.andrick.universalClipboard.domain.models.clipboard;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

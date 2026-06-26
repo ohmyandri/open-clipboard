@@ -1,7 +1,7 @@
-package com.andrick.universalClipboard.infrastructure.adapters.out.persistence;
+package com.andrick.universalClipboard.infrastructure.adapters.out.db;
 
 import com.andrick.universalClipboard.domain.ports.out.ClipboardRepositoryPort;
-import com.andrick.universalClipboard.domain.models.ClipboardItem;
+import com.andrick.universalClipboard.domain.models.clipboard.ClipboardItem;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.Stack;
 
 @Repository
-public class InMemoryRepository implements ClipboardRepositoryPort {
+public class InMemoryClipboardRepository implements ClipboardRepositoryPort {
     final private Map<String, Stack<ClipboardItem> > repository = new HashMap<>();
 
     @Override

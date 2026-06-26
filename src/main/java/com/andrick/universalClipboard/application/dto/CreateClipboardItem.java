@@ -1,6 +1,6 @@
-package com.andrick.universalClipboard.domain.models;
+package com.andrick.universalClipboard.application.dto;
 
-import java.time.LocalDateTime;
+import com.andrick.universalClipboard.domain.models.clipboard.ContentType;
 
 public record CreateClipboardItem(
         String userId,

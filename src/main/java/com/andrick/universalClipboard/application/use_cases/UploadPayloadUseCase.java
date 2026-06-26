@@ -1,9 +1,8 @@
 package com.andrick.universalClipboard.application.use_cases;
 
-import com.andrick.universalClipboard.domain.models.CreateClipboardItem;
+import com.andrick.universalClipboard.application.dto.CreateClipboardItem;
 import com.andrick.universalClipboard.domain.ports.out.ClipboardRepositoryPort;
-import com.andrick.universalClipboard.domain.ports.out.NotificationPort;
-import com.andrick.universalClipboard.domain.models.ClipboardItem;
+import com.andrick.universalClipboard.domain.models.clipboard.ClipboardItem;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

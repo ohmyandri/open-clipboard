@@ -1,7 +1,7 @@
 package com.andrick.universalClipboard.infrastructure.controllers;
 
 import com.andrick.universalClipboard.application.use_cases.GetPayloadUseCase;
-import com.andrick.universalClipboard.domain.models.ClipboardItem;
+import com.andrick.universalClipboard.domain.models.clipboard.ClipboardItem;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

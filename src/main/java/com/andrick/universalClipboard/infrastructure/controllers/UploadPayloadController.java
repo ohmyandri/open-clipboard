@@ -1,7 +1,7 @@
 package com.andrick.universalClipboard.infrastructure.controllers;
 
 import com.andrick.universalClipboard.application.use_cases.UploadPayloadUseCase;
-import com.andrick.universalClipboard.domain.models.CreateClipboardItem;
+import com.andrick.universalClipboard.application.dto.CreateClipboardItem;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
