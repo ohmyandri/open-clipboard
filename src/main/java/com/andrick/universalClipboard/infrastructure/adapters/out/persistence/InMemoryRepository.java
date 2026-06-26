@@ -26,8 +26,9 @@ public class InMemoryRepository implements ClipboardRepositoryPort {
     @Override
     public Optional<ClipboardItem> get(String userId) {
         Stack<ClipboardItem> stack = repository.get(userId);
+
         if (stack != null && !stack.isEmpty()) {
-            return Optional.of(stack.pop());
+            return Optional.of(stack.peek());
         }
 
         return Optional.empty();
