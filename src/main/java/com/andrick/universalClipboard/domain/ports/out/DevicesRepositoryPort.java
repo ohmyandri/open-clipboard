@@ -8,5 +8,5 @@ public interface DevicesRepositoryPort {
     List<Device> findDevicesByUserId(String id);
 
     void addDevice(Device device);
-    void removeDevice(String deviceId);
+    boolean removeDevice(String deviceId);
 }

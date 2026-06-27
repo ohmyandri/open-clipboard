@@ -11,7 +11,6 @@ import java.util.List;
 public class InMemoryDevicesRepository implements DevicesRepositoryPort {
     final private List<Device> repository = new ArrayList<>();
 
-
     @Override
     public List<Device> findDevicesByUserId(String id) {
         return repository.stream().filter(
@@ -25,7 +24,7 @@ public class InMemoryDevicesRepository implements DevicesRepositoryPort {
     }
 
     @Override
-    public void removeDevice(String deviceId) {
-        repository.removeIf(device -> device.deviceId().equals(deviceId));
+    public boolean removeDevice(String deviceId) {
+        return repository.removeIf(device -> device.deviceId().equals(deviceId));
     }
 }
