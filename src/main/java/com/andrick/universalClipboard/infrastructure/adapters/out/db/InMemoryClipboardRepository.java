@@ -9,18 +9,12 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Stack;
 
-@Repository
 public class InMemoryClipboardRepository implements ClipboardRepositoryPort {
     final private Map<String, Stack<ClipboardItem> > repository = new HashMap<>();
 
     @Override
     public void save(ClipboardItem data) {
         repository.computeIfAbsent(data.userId(), k -> new Stack<>()).push(data);
-    }
-
-    @Override
-    public Optional<ClipboardItem> save(String userId) {
-        return Optional.empty();
     }
 
     @Override

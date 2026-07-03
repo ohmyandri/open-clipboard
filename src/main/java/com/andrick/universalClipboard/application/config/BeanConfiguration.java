@@ -1,6 +1,7 @@
 package com.andrick.universalClipboard.application.config;
 
 import com.andrick.universalClipboard.application.use_cases.*;
+import com.andrick.universalClipboard.domain.models.clipboard.ClipboardItem;
 import com.andrick.universalClipboard.domain.ports.out.ClipboardRepositoryPort;
 import com.andrick.universalClipboard.domain.ports.out.DevicesRepositoryPort;
 import com.andrick.universalClipboard.domain.ports.out.NotificationPort;
@@ -9,10 +10,9 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BeanConfiguration {
-
     @Bean
-    public UploadPayloadUseCase uploadPayloadUseCase(ClipboardRepositoryPort repositoryPort){
-        return new UploadPayloadUseCase(repositoryPort);
+    public UploadPayloadUseCase uploadPayloadUseCase(ClipboardRepositoryPort repositoryPort, NotificationPort notificationPort){
+        return new UploadPayloadUseCase(repositoryPort, notificationPort);
     }
 
     @Bean

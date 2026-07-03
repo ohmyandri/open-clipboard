@@ -27,9 +27,6 @@ public record ClipboardItem(
         if (originDeviceId == null || originDeviceId.isBlank()) {
             throw new IllegalArgumentException("Origin device ID is required.");
         }
-        if (createdAt == null) {
-            throw new IllegalArgumentException("Creation timestamp must be defined.");
-        }
 
         if (contentType == ContentType.TEXT && payload.length() > 100000) {
             throw new IllegalArgumentException("Payload exceeds the maximum allowed limit of 100,000 characters.");

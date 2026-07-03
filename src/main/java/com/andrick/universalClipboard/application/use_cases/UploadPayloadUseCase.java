@@ -3,17 +3,19 @@ package com.andrick.universalClipboard.application.use_cases;
 import com.andrick.universalClipboard.application.dto.CreateClipboardItem;
 import com.andrick.universalClipboard.domain.ports.out.ClipboardRepositoryPort;
 import com.andrick.universalClipboard.domain.models.clipboard.ClipboardItem;
+import com.andrick.universalClipboard.domain.ports.out.NotificationPort;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class UploadPayloadUseCase {
     private final ClipboardRepositoryPort clipboardRepositoryPort;
+    private final NotificationPort notificationPort;
 
     //Constructor-based dependencies injection
-    public UploadPayloadUseCase(ClipboardRepositoryPort clipboardRepositoryPort) {
+    public UploadPayloadUseCase(ClipboardRepositoryPort clipboardRepositoryPort, NotificationPort notificationPort) {
         this.clipboardRepositoryPort = clipboardRepositoryPort;
-//        this.notificationPort = notificationPort;
+        this.notificationPort = notificationPort;
     }
 
     public void uploadPayload(CreateClipboardItem dto){
@@ -23,11 +25,13 @@ public class UploadPayloadUseCase {
                 dto.contentType(),
                 dto.payload(),
                 dto.originDeviceId(),
-                LocalDateTime.now()
+                null
         );
 
         //Making the data persist
         clipboardRepositoryPort.save(data);
         //Notification to the devices to sync
+        notificationPort.broadcast(data);
+
     }
 }
