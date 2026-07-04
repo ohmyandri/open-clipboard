@@ -5,6 +5,7 @@ import com.andrick.universalClipboard.domain.models.clipboard.ClipboardItem;
 import com.andrick.universalClipboard.domain.ports.out.ClipboardRepositoryPort;
 import com.andrick.universalClipboard.domain.ports.out.DevicesRepositoryPort;
 import com.andrick.universalClipboard.domain.ports.out.NotificationPort;
+import com.andrick.universalClipboard.domain.ports.out.UserRepositoryPort;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -33,5 +34,15 @@ public class BeanConfiguration {
     @Bean
     public GetUserDevicesUseCase getUserDevicesUseCase(DevicesRepositoryPort devicesRepositoryPort){
         return new GetUserDevicesUseCase(devicesRepositoryPort);
+    }
+
+    @Bean
+    public AddUserUseCase addUserUseCase(UserRepositoryPort userRepositoryPort){
+        return new AddUserUseCase(userRepositoryPort);
+    }
+
+    @Bean
+    public RemoveUserUseCase removeUserUseCase(UserRepositoryPort userRepositoryPort){
+        return new RemoveUserUseCase(userRepositoryPort);
     }
 }
