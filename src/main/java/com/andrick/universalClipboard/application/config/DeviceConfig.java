@@ -5,7 +5,9 @@ import com.andrick.universalClipboard.application.use_cases.GetUserDevicesUseCas
 import com.andrick.universalClipboard.application.use_cases.RemoveDeviceUseCase;
 import com.andrick.universalClipboard.domain.ports.out.DevicesRepositoryPort;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class DeviceConfig {
     @Bean
     public AddDeviceUseCase addDeviceUseCase(DevicesRepositoryPort devicesRepositoryPort){
