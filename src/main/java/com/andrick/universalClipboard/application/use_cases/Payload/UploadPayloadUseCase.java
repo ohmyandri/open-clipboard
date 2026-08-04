@@ -21,9 +21,9 @@ public class UploadPayloadUseCase {
         ClipboardItem data = new ClipboardItem(
                 UUID.randomUUID(),
                 dto.userId(),
+                dto.originDeviceId(),
                 dto.contentType(),
                 dto.payload(),
-                dto.originDeviceId(),
                 null
         );
 

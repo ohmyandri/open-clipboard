@@ -6,9 +6,9 @@ import java.util.UUID;
 public record ClipboardItem(
         UUID id,
         String userId,
+        String originDeviceId,
         ContentType contentType,
         String payload,
-        String originDeviceId,
         LocalDateTime createdAt
 ) {
     public ClipboardItem {

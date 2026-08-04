@@ -43,9 +43,9 @@ public class SqlClipboardPayloadRepositoryAdapter implements ClipboardRepository
             ClipboardItem item = jdbcTemplate.queryForObject(sql, (rs, rowNum) -> new ClipboardItem(
                     UUID.fromString(rs.getString("id")),
                     rs.getString("user_id"),
+                    rs.getString("origin_device_id"),
                     ContentType.valueOf(rs.getString("content_type")),
                     rs.getString("payload"),
-                    rs.getString("origin_device_id"),
                     rs.getObject("created_at", LocalDateTime.class)
             ), userId);
 

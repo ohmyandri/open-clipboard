@@ -22,8 +22,8 @@ public class SqlDevicesAdapter implements DevicesRepositoryPort {
         String sql = "SELECT device_id, user_id, device_name, device_type FROM devices WHERE user_id = ?";
 
         return jdbcTemplate.query(sql, (rs, rowNum) -> new Device(
-                rs.getString("device_id"),
                 rs.getString("user_id"),
+                rs.getString("device_id"),
                 rs.getString("device_name"),
                 DeviceType.valueOf(rs.getString("device_type").toUpperCase())
         ), userId);

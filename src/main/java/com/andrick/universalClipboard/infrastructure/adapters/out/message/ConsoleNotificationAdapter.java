@@ -24,12 +24,11 @@ public class ConsoleNotificationAdapter implements NotificationPort {
         System.out.println("Payload Uploaded from: " + originDevice);
         System.out.println();
 
-        devices.forEach(device -> {
-            if(!originDevice.equals(device.deviceId())){
-                System.out.println("The clipboard arrived to: " + device.deviceId());
-                System.out.println(device.toString());
-                System.out.println();
-            }
-        });
+        devices.stream()
+                .filter(device -> !originDevice.equals(device.deviceId()))
+                .forEach(targetDevice -> {
+                    System.out.println("Sending clipboard to: " + targetDevice.deviceId());
+                    System.out.println(data.toString());
+                });
     }
 }

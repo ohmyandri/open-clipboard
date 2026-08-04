@@ -4,8 +4,8 @@ import com.andrick.universalClipboard.domain.models.clipboard.ContentType;
 
 public record CreateClipboardItem(
         String userId,
-        ContentType contentType,
+        String originDeviceId,
         String payload,
-        String originDeviceId
+        ContentType contentType
 ) {
 }
