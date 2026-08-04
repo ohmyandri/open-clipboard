@@ -2,9 +2,10 @@ package com.andrick.universalClipboard.infrastructure.controllers;
 
 import com.andrick.universalClipboard.application.dto.CreateDevice;
 import com.andrick.universalClipboard.application.use_cases.Devices.AddDeviceUseCase;
-import com.andrick.universalClipboard.application.use_cases.Users.GetUserDevicesUseCase;
+import com.andrick.universalClipboard.application.use_cases.Devices.GetUserDevicesUseCase;
 import com.andrick.universalClipboard.application.use_cases.Devices.RemoveDeviceUseCase;
 import com.andrick.universalClipboard.domain.models.device.Device;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,6 +25,7 @@ public class DeviceController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     void addDevice(
             @RequestBody CreateDevice rawData
             ){
@@ -31,6 +33,7 @@ public class DeviceController {
     }
 
     @DeleteMapping("/{deviceId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     void removeDevice(
             @PathVariable String deviceId
     ){
