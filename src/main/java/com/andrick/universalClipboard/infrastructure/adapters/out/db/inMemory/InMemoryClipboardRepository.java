@@ -1,8 +1,7 @@
-package com.andrick.universalClipboard.infrastructure.adapters.out.db;
+package com.andrick.universalClipboard.infrastructure.adapters.out.db.inMemory;
 
 import com.andrick.universalClipboard.domain.ports.out.ClipboardRepositoryPort;
 import com.andrick.universalClipboard.domain.models.clipboard.ClipboardItem;
-import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.andrick.universalClipboard.infrastructure.adapters.out.db;
+package com.andrick.universalClipboard.infrastructure.adapters.out.db.inMemory;
 
 import com.andrick.universalClipboard.domain.models.device.Device;
 import com.andrick.universalClipboard.domain.ports.out.DevicesRepositoryPort;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
+//@Repository
 public class InMemoryDevicesRepository implements DevicesRepositoryPort {
     final private List<Device> repository = new ArrayList<>();
 

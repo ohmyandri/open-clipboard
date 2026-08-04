@@ -1,4 +1,4 @@
-package com.andrick.universalClipboard.application.use_cases;
+package com.andrick.universalClipboard.application.use_cases.Users;
 
 import com.andrick.universalClipboard.domain.models.device.Device;
 import com.andrick.universalClipboard.domain.ports.out.DevicesRepositoryPort;

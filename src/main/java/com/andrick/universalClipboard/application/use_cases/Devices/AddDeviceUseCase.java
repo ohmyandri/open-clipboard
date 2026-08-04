@@ -1,9 +1,8 @@
-package com.andrick.universalClipboard.application.use_cases;
+package com.andrick.universalClipboard.application.use_cases.Devices;
 
 import com.andrick.universalClipboard.application.dto.CreateDevice;
 import com.andrick.universalClipboard.domain.models.device.Device;
 import com.andrick.universalClipboard.domain.ports.out.DevicesRepositoryPort;
-import com.andrick.universalClipboard.infrastructure.adapters.out.db.InMemoryDevicesRepository;
 
 public class AddDeviceUseCase {
     final private DevicesRepositoryPort repository;

@@ -1,9 +1,9 @@
 package com.andrick.universalClipboard.infrastructure.controllers;
 
 import com.andrick.universalClipboard.application.dto.CreateDevice;
-import com.andrick.universalClipboard.application.use_cases.AddDeviceUseCase;
-import com.andrick.universalClipboard.application.use_cases.GetUserDevicesUseCase;
-import com.andrick.universalClipboard.application.use_cases.RemoveDeviceUseCase;
+import com.andrick.universalClipboard.application.use_cases.Devices.AddDeviceUseCase;
+import com.andrick.universalClipboard.application.use_cases.Users.GetUserDevicesUseCase;
+import com.andrick.universalClipboard.application.use_cases.Devices.RemoveDeviceUseCase;
 import com.andrick.universalClipboard.domain.models.device.Device;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,8 +1,8 @@
 package com.andrick.universalClipboard.application.config;
 
-import com.andrick.universalClipboard.application.use_cases.AddDeviceUseCase;
-import com.andrick.universalClipboard.application.use_cases.GetUserDevicesUseCase;
-import com.andrick.universalClipboard.application.use_cases.RemoveDeviceUseCase;
+import com.andrick.universalClipboard.application.use_cases.Devices.AddDeviceUseCase;
+import com.andrick.universalClipboard.application.use_cases.Users.GetUserDevicesUseCase;
+import com.andrick.universalClipboard.application.use_cases.Devices.RemoveDeviceUseCase;
 import com.andrick.universalClipboard.domain.ports.out.DevicesRepositoryPort;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

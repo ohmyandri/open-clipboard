@@ -1,4 +1,4 @@
-package com.andrick.universalClipboard.application.use_cases;
+package com.andrick.universalClipboard.application.use_cases.Users;
 
 import com.andrick.universalClipboard.application.dto.CreateUser;
 import com.andrick.universalClipboard.domain.models.user.User;

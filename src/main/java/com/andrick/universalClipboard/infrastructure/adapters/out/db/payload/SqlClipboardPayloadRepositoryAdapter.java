@@ -1,4 +1,4 @@
-package com.andrick.universalClipboard.infrastructure.adapters.out.db;
+package com.andrick.universalClipboard.infrastructure.adapters.out.db.payload;
 
 import com.andrick.universalClipboard.domain.models.clipboard.ClipboardItem;
 import com.andrick.universalClipboard.domain.models.clipboard.ContentType;

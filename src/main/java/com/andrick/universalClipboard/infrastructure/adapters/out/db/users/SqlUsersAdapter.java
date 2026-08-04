@@ -1,4 +1,4 @@
-package com.andrick.universalClipboard.infrastructure.adapters.out.db;
+package com.andrick.universalClipboard.infrastructure.adapters.out.db.users;
 
 import com.andrick.universalClipboard.domain.models.user.User;
 import com.andrick.universalClipboard.domain.ports.out.UserRepositoryPort;

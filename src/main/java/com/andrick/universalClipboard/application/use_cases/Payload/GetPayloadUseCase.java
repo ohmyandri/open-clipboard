@@ -1,4 +1,4 @@
-package com.andrick.universalClipboard.application.use_cases;
+package com.andrick.universalClipboard.application.use_cases.Payload;
 
 import com.andrick.universalClipboard.domain.ports.out.ClipboardRepositoryPort;
 import com.andrick.universalClipboard.domain.models.clipboard.ClipboardItem;

@@ -1,8 +1,8 @@
 package com.andrick.universalClipboard.infrastructure.controllers;
 
 import com.andrick.universalClipboard.application.dto.CreateUser;
-import com.andrick.universalClipboard.application.use_cases.AddUserUseCase;
-import com.andrick.universalClipboard.application.use_cases.RemoveUserUseCase;
+import com.andrick.universalClipboard.application.use_cases.Users.AddUserUseCase;
+import com.andrick.universalClipboard.application.use_cases.Users.RemoveUserUseCase;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
