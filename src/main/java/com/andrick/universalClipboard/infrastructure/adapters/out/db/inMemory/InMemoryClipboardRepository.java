@@ -12,8 +12,8 @@ public class InMemoryClipboardRepository implements ClipboardRepositoryPort {
     final private Map<String, Stack<ClipboardItem> > repository = new HashMap<>();
 
     @Override
-    public void save(ClipboardItem data) {
-        repository.computeIfAbsent(data.userId(), k -> new Stack<>()).push(data);
+    public ClipboardItem save(ClipboardItem data) {
+        return repository.computeIfAbsent(data.userId(), k -> new Stack<>()).push(data);
     }
 
     @Override

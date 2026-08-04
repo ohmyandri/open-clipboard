@@ -27,10 +27,7 @@ public class UploadPayloadUseCase {
                 null
         );
 
-        //Making the data persist
-        clipboardRepositoryPort.save(data);
         //Notification to the devices to sync
-        notificationPort.broadcast(data);
-
+        notificationPort.broadcast(clipboardRepositoryPort.save(data));
     }
 }
