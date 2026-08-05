@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 
 @RequestMapping("/api/v1/clipboard")
+@CrossOrigin(origins = "*")
 public class GetPayloadController {
     private final GetPayloadUseCase getPayloadUseCase;
 
@@ -14,7 +15,7 @@ public class GetPayloadController {
         this.getPayloadUseCase = getPayloadUseCase;
     }
 
-    @GetMapping()
+    @GetMapping("/latest")
     public ClipboardItem get(
             @RequestHeader("X-User-Id") String userId
     ){

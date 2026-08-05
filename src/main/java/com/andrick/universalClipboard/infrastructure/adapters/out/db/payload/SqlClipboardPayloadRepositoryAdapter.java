@@ -57,14 +57,16 @@ public class SqlClipboardPayloadRepositoryAdapter implements ClipboardRepository
 
     @Override
     public Optional<ClipboardItem> get(String userId) {
-        String sql = "SELECT id, user_id, content_type, payload, origin_device_id, created_at " +
-                "FROM clipboard_payloads WHERE user_id = ? ORDER BY created_at DESC LIMIT 1";
+        String sql = """
+            SELECT id, user_id, content_type, payload, origin_device_id, created_at
+            FROM clipboard_payloads
+            WHERE user_id = ?
+            ORDER BY created_at DESC
+            LIMIT 1
+            """;
 
-        try {
-            ClipboardItem item = jdbcTemplate.queryForObject(sql, clipboardItemRowMapper, userId);
-            return Optional.ofNullable(item);
-        } catch (EmptyResultDataAccessException e) {
-            return Optional.empty();
-        }
+        return jdbcTemplate.query(sql, clipboardItemRowMapper, userId)
+                .stream()
+                .findFirst();
     }
 }
